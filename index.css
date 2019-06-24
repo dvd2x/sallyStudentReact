@@ -1,0 +1,42 @@
+header {
+  background-color: bisque;
+}
+.center {
+  text-align: center;
+}
+.container {
+  padding: 60px;
+}
+.container2 {
+  padding: 10px;
+}
+
+h1:hover {
+  font-size: 40px;
+  color: orange;
+}
+
+h2:hover {
+  font-size: 30px;
+  color: chartreuse;
+}
+
+h3:hover {
+  font-size: 25px;
+  color: cyan;
+}
+
+p:hover {
+  font-size: 20px;
+  color: deeppink;
+}
+
+.container:hover {
+  font-size: 20px;
+  color: deeppink;
+}
+
+address:hover {
+  font-size: 20px;
+  color: deeppink;
+}
