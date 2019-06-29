@@ -1,20 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Sally Student Resume</title>
-    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <div id="application-root"></div>
 
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script
-      src="https://unpkg.com/babel-standalone@6/babel.min.js"
-      crossorigin
-    ></script>
-    <script type="text/babel" src="index.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+      function App(props) {
+        console.log(props);
+        return (
+          <main className="container">
+            <header role="header">
+              <h1>{props.name} Resume</h1>
+              <address>111 Fun St, Detroit, MI 11111</address>
+              <p>
+                phone (555) 555-1212, email me:
+                <a href="mailto:Sally@yahoo.com">{props.name} </a>, See my:
+                <a href="https://play.google.com/store/apps/details?id=com.duolingo">
+                  Portfolio
+                </a>
+              </p>
+              <h2 class="center">Software Engineer</h2>
+            </header>
+            <section class="intro center">
+              <img
+                src="1.jpg"
+                class="center"
+                alt="A Picture of Sally Student"
+              />
+              <p>Greetings my name is {props.name}</p>
+            </section>
+            <section class="summary">
+              <h3>Summary</h3>
+              <p>
+                Resourceful, analytical and detail-driven individual with
+                capabilities in completing multiple projects with competing
+                deadlines. Aggressive in identifying and resolving inefficient
+                operational processes.Strong team member, able to motivate crews
+                to achieve optimal production rates while maintaining high
+                safety methods and practices. Reliable follow-through skills,
+                fulfilling all administrative requirements from field
+                activities.
+              </p>
+            </section>
+            <section class="experience">
+              <h3>Experience</h3>
+              <p>Open Paq LLC, Dump Water, ND 2015-2016</p>
+              <p>
+                <b>IT Help Desk Technician</b>
+              </p>
+              <ul>
+                <li>
+                  Provided desktop support for specialized hardware and software
+                  systems used in Yanfeng Automotive Interiors
+                </li>
+                <li>Configured local and network printers</li>
+                <li>
+                  Troubleshot and resolved desktop, network, and systems issues
+                </li>
+              </ul>
+              <br />
+              <p>The Smelly Skunk, Hell, MI 2011-2016</p>
+              <p>
+                <b>Application Engineer</b>
+              </p>
+              <ul>
+                <li>
+                  Performed hardware and software support and installation.
+                </li>
+                <li>
+                  Diagnosed application errors and network connectivity
+                  problems.
+                </li>
+                <li>Analyzed and evaluated systems for faults</li>
+                <li>
+                  Designed software applications, developing and executing test
+                  plans and documenting development process
+                </li>
+              </ul>
+            </section>
+            <section class="education">
+              <h3 class="center">Education</h3>
+              <p>Delaware State University, Dover, DE</p>
+              <p>Completed: 2000</p>
+              <p>
+                <b>
+                  <i>
+                    Bachelor of Science, Electrical/Electronic Engineering,
+                    Minor: Mechanical Engineering
+                  </i>
+                </b>
+              </p>
+            </section>
+          </main>
+        );
+      }
+
+      App.defaultProps = {
+        name: "Sally Student"
+      };
+
+      ReactDOM.render(
+        <App name="David Piper">
+          <h1>CurrentPage Title!</h1>
+        </App>,
+        document.querySelector("#application-root")
+      );
+    </script>
   </body>
 </html>
