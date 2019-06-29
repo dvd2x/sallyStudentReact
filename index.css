@@ -1,42 +1,53 @@
-header {
-  background-color: bisque;
+* {
+  box-sizing: border-box;
 }
+
+.styles {
+  background-color: blueviolet;
+  color: white;
+  text-align: center;
+  padding: 2%;
+  width: 100%;
+}
+
+body {
+  max-width: 110%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.intro {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.summary,
+.experience,
+.education {
+  margin: 5%;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+}
+
+ul {
+  font-size: 20px;
+}
+
 .center {
   text-align: center;
 }
-.container {
-  padding: 60px;
-}
-.container2 {
-  padding: 10px;
-}
 
-h1:hover {
-  font-size: 40px;
-  color: orange;
-}
-
-h2:hover {
-  font-size: 30px;
-  color: chartreuse;
-}
-
-h3:hover {
-  font-size: 25px;
-  color: cyan;
-}
-
-p:hover {
-  font-size: 20px;
-  color: deeppink;
-}
-
-.container:hover {
-  font-size: 20px;
-  color: deeppink;
-}
-
-address:hover {
-  font-size: 20px;
-  color: deeppink;
+a {
+  color: white;
 }
